@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=dev npx tsx watch src/index.ts",
+    "test": "npx tsx --test ./src/*.test.ts",
     "format": "npx prettier . --write",
     "format:ci": "npx prettier . --check"
   },

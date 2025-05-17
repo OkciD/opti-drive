@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-        "module": "NodeNext",
+        "module": "Node18",
         "target": "ESNext",
-        "moduleResolution": "nodenext",
+        "moduleResolution": "node16",
         "sourceMap": false,
         "declaration": false,
         "noEmit": true,
         "resolveJsonModule": true,
+        "allowImportingTsExtensions": true,
         // Strict Checks
         "alwaysStrict": true,
         "noImplicitAny": true,
