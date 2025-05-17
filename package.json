@@ -1,0 +1,30 @@
+{
+  "name": "opti-drive",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=dev npx tsx watch src/index.ts",
+    "format": "npx prettier . --write",
+    "format:ci": "npx prettier . --check"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/OkciD/opti-drive.git"
+  },
+  "author": "Yury Baykov <yury.baykov@mail.ru>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/OkciD/opti-drive/issues"
+  },
+  "homepage": "https://github.com/OkciD/opti-drive#readme",
+  "devDependencies": {
+    "@types/node": "20.17.47",
+    "prettier": "3.5.3",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}

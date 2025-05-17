@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "target": "ESNext",
+        "moduleResolution": "nodenext",
+        "sourceMap": false,
+        "declaration": false,
+        "noEmit": true,
+        "resolveJsonModule": true,
+        // Strict Checks
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "useUnknownInCatchVariables": true,
+        "strictPropertyInitialization": true,
+        "strictFunctionTypes": true,
+        "noImplicitThis": true,
+        "strictBindCallApply": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+        // Linter Checks
+        "noImplicitReturns": true,
+        "noImplicitOverride": true,
+        "forceConsistentCasingInFileNames": true,
+        // https://eslint.org/docs/rules/consistent-return ?
+        "noFallthroughCasesInSwitch": true,
+        // https://eslint.org/docs/rules/no-fallthrough
+        "noUnusedLocals": true,
+        // https://eslint.org/docs/rules/no-unused-vars
+        "noUnusedParameters": true,
+        // https://eslint.org/docs/rules/no-unused-vars#args
+        "allowUnreachableCode": false,
+        // https://eslint.org/docs/rules/no-unreachable ?
+        "allowUnusedLabels": false,
+        // https://eslint.org/docs/rules/no-unused-labels
+        // Base Strict Checks
+        "noImplicitUseStrict": false,
+        "suppressExcessPropertyErrors": false,
+        "suppressImplicitAnyIndexErrors": false,
+        "noStrictGenericChecks": false
+    }
+}
