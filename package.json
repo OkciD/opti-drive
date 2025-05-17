@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"start": "NODE_ENV=dev npx tsx watch src/index.ts",
+		"start": "NODE_ENV=development npx tsx watch src/index.ts",
 		"test": "npx tsx --test ./src/*.test.ts",
 		"format": "npx prettier . --write",
 		"format:ci": "npx prettier . --check"
@@ -23,9 +23,14 @@
 	},
 	"homepage": "https://github.com/OkciD/opti-drive#readme",
 	"devDependencies": {
+		"@types/convict": "6.1.6",
 		"@types/node": "20.17.47",
 		"prettier": "3.5.3",
 		"tsx": "4.19.4",
 		"typescript": "5.8.3"
+	},
+	"dependencies": {
+		"convict": "6.2.4",
+		"cron": "4.3.1"
 	}
 }

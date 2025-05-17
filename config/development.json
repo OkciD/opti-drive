@@ -1,0 +1,24 @@
+{
+	"app": {
+		"routes": [
+			{
+				"id": "test",
+				"waypoints": [
+					[
+						1,
+						2
+					],
+					[
+						3,
+						4
+					]
+				],
+				"cronExpression": "20 4 * * 1-5",
+				"timeZone": "Europe/Moscow"
+			}
+		]
+	},
+	"log": {
+		"level": "trace"
+	}
+}
