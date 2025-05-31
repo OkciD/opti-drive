@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {test, mock, beforeEach, afterEach} from 'node:test';
-import {sleep} from './index.ts';
+import {sleep} from './sleep.ts';
 
 test.suite('sleep', async () => {
 	beforeEach(() => {
@@ -49,6 +49,11 @@ test.suite('sleep', async () => {
 			thenMock.mock.callCount(),
 			1,
 			'then should have been called',
+		);
+		assert.strictEqual(
+			catchMock.mock.callCount(),
+			0,
+			'catch should not have been called',
 		);
 		assert.strictEqual(
 			finallyMock.mock.callCount(),
