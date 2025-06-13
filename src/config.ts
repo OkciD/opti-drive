@@ -1,4 +1,5 @@
 import convict from 'convict';
+import {url} from 'convict-format-with-validator';
 import path from 'node:path';
 import cron from 'cron';
 
@@ -13,6 +14,11 @@ export type Config = {
 	env: 'production' | 'development';
 	app: {
 		routes: Route[];
+		yaMapsHost: string;
+	};
+	browser: {
+		headless: boolean;
+		args: string[];
 	};
 	log: {
 		level: 'trace' | 'info' | 'warn' | 'error';
@@ -97,6 +103,21 @@ convict.addFormat({
 	},
 });
 
+convict.addFormat(url);
+
+convict.addFormat({
+	name: 'chrome-args-array',
+	validate: function (args: string[]) {
+		if (!Array.isArray(args)) {
+			throw new Error('must be of type Array');
+		}
+
+		if (!args.every((a) => a.startsWith('--'))) {
+			throw new Error('arg must start with --');
+		}
+	},
+});
+
 const schema: convict.Schema<Config> = {
 	env: {
 		doc: 'The application environment',
@@ -109,6 +130,21 @@ const schema: convict.Schema<Config> = {
 			doc: 'Routes to check',
 			format: 'routes-array',
 		}),
+		yaMapsHost: {
+			doc: 'Yandex maps host',
+			format: 'url',
+			default: 'https://yandex.ru',
+		},
+	},
+	browser: {
+		headless: {
+			format: Boolean,
+			default: false,
+		},
+		args: {
+			format: 'chrome-args-array',
+			default: [],
+		},
 	},
 	log: {
 		level: {

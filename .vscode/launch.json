@@ -22,7 +22,10 @@
 				"<node_internals>/**",
 				// Ignore all dependencies (optional)
 				"${workspaceFolder}/node_modules/**"
-			]
+			],
+			"env": {
+				"NODE_ENV": "development"
+			}
 		}
 	]
 }
