@@ -15,6 +15,7 @@ export type Config = {
 	app: {
 		routes: Route[];
 		yaMapsHost: string;
+		screenshotsFolder: string;
 	};
 	browser: {
 		headless: boolean;
@@ -134,6 +135,10 @@ const schema: convict.Schema<Config> = {
 			doc: 'Yandex maps host',
 			format: 'url',
 			default: 'https://yandex.ru',
+		},
+		screenshotsFolder: {
+			format: String,
+			default: 'screenshots',
 		},
 	},
 	browser: {
